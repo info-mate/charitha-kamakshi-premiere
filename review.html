@@ -1,52 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Share Your Review</title>
+  <title>Share Your Review – Charitha Kamakshi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial; text-align: center; padding: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: crimson;
+    }
+    .box {
+      background: #1c1c1c;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+      max-width: 500px;
+    }
     button {
-      padding: 10px 20px;
-      margin: 10px;
+      padding: 12px 20px;
+      margin: 10px 0;
       font-size: 16px;
       background: crimson;
       color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
+      width: 100%;
+    }
+    a {
+      text-decoration: none;
+    }
+    .small {
+      font-size: 14px;
+      color: #ccc;
     }
   </style>
+
   <script>
-    function copyText() {
-      const text = "Just watched #CharithaKamakshi ❤️ Beautiful emotional journey. Streaming soon on ETV Win. Don't miss it!";
+    function copyCaption(text) {
       navigator.clipboard.writeText(text);
       alert("Caption copied! Now open Instagram and paste.");
     }
   </script>
+
 </head>
 <body>
 
-<h2>Thank You for Watching ❤️</h2>
+  <h1>Thank You for Watching ❤️</h1>
+  <p class="small">Support us by sharing your review and tagging our official page.</p>
 
-<p>Support us by sharing your review.</p>
+  <div class="box">
+    <h3>Option 1 – Emotional</h3>
+    <button onclick="copyCaption('Just watched #CharithaKamakshi ❤️ A beautiful emotional journey with heartfelt performances. Don’t miss it on ETV Win!')">
+      Copy Caption
+    </button>
+  </div>
 
-<button onclick="copyText()">Copy Caption</button>
+  <div class="box">
+    <h3>Option 2 – Romantic</h3>
+    <button onclick="copyCaption('A touching love story that stays with you 💕 #CharithaKamakshi Streaming soon on ETV Win. Highly recommended!')">
+      Copy Caption
+    </button>
+  </div>
 
-<br>
+  <div class="box">
+    <h3>Option 3 – Mass Style</h3>
+    <button onclick="copyCaption('Powerful performances and strong emotions! 🔥 Just watched #CharithaKamakshi – Watch it on ETV Win.')">
+      Copy Caption
+    </button>
+  </div>
 
-<a href="https://instagram.com">
-  <button>Open Instagram</button>
-</a>
+  <div class="box">
+    <h3>Share Now</h3>
 
-<br>
+    <a href="https://instagram.com" target="_blank">
+      <button>Open Instagram</button>
+    </a>
 
-<a href="https://wa.me/?text=Just watched Charitha Kamakshi! Streaming soon on ETV Win.">
-  <button>Share on WhatsApp</button>
-</a>
+    <a href="https://wa.me/?text=Just watched Charitha Kamakshi! Beautiful emotional film. Streaming soon on ETV Win." target="_blank">
+      <button>Share on WhatsApp</button>
+    </a>
 
-<br><br>
+  </div>
 
-<a href="index.html">Back to Home</a>
+  <br>
+  <a href="index.html" style="color:crimson;">Back to Home</a>
 
 </body>
 </html>
