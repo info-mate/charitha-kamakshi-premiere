@@ -21,10 +21,20 @@
       border-radius: 12px;
       max-width: 500px;
     }
+    textarea {
+      width: 100%;
+      height: 90px;
+      background: #222;
+      color: white;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 10px;
+      resize: none;
+    }
     button {
-      padding: 12px 20px;
-      margin: 10px 0;
-      font-size: 16px;
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 15px;
       background: crimson;
       color: white;
       border: none;
@@ -35,15 +45,14 @@
     a {
       text-decoration: none;
     }
-    .small {
-      font-size: 14px;
-      color: #ccc;
-    }
   </style>
 
   <script>
-    function copyCaption(text) {
-      navigator.clipboard.writeText(text);
+    function copyText(id) {
+      var copyText = document.getElementById(id);
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
       alert("Caption copied! Now open Instagram and paste.");
     }
   </script>
@@ -51,33 +60,40 @@
 </head>
 <body>
 
-  <h1>Thank You for Watching ❤️</h1>
-  <p class="small">Support us by sharing your review and tagging our official page.</p>
+  <h1>Share Your Experience ❤️</h1>
+  <p>Choose a caption, copy it, and post on Instagram. Tag our official page.</p>
 
   <div class="box">
-    <h3>Option 1 – Emotional</h3>
-    <button onclick="copyCaption('Just watched #CharithaKamakshi ❤️ A beautiful emotional journey with heartfelt performances. Don’t miss it on ETV Win!')">
-      Copy Caption
-    </button>
+    <h3>Emotional Style</h3>
+    <textarea id="caption1" readonly>
+Just watched #CharithaKamakshi ❤️
+A beautiful emotional journey with heartfelt performances.
+Streaming soon on ETV Win.
+    </textarea>
+    <button onclick="copyText('caption1')">Copy This Caption</button>
   </div>
 
   <div class="box">
-    <h3>Option 2 – Romantic</h3>
-    <button onclick="copyCaption('A touching love story that stays with you 💕 #CharithaKamakshi Streaming soon on ETV Win. Highly recommended!')">
-      Copy Caption
-    </button>
+    <h3>Romantic Style</h3>
+    <textarea id="caption2" readonly>
+Watched #CharithaKamakshi together ❤️
+A touching love story filled with emotions.
+Don’t miss it on ETV Win.
+    </textarea>
+    <button onclick="copyText('caption2')">Copy This Caption</button>
   </div>
 
   <div class="box">
-    <h3>Option 3 – Mass Style</h3>
-    <button onclick="copyCaption('Powerful performances and strong emotions! 🔥 Just watched #CharithaKamakshi – Watch it on ETV Win.')">
-      Copy Caption
-    </button>
+    <h3>Energetic Style</h3>
+    <textarea id="caption3" readonly>
+Powerful performances 🔥
+Strong emotions ❤️
+#CharithaKamakshi streaming soon on ETV Win.
+    </textarea>
+    <button onclick="copyText('caption3')">Copy This Caption</button>
   </div>
 
   <div class="box">
-    <h3>Share Now</h3>
-
     <a href="https://instagram.com" target="_blank">
       <button>Open Instagram</button>
     </a>
@@ -85,7 +101,6 @@
     <a href="https://wa.me/?text=Just watched Charitha Kamakshi! Beautiful emotional film. Streaming soon on ETV Win." target="_blank">
       <button>Share on WhatsApp</button>
     </a>
-
   </div>
 
   <br>
