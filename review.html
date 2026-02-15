@@ -10,30 +10,41 @@
       color: white;
       text-align: center;
       padding: 20px;
+      margin: 0;
     }
-    h1 { color: crimson; }
+
+    h1 {
+      color: crimson;
+    }
+
     .box {
       background: #1c1c1c;
       padding: 20px;
       margin: 20px auto;
       border-radius: 12px;
-      max-width: 500px;
+      width: 100%;
+      max-width: 600px;
     }
+
     img {
       width: 100%;
+      height: auto;
       border-radius: 10px;
       margin-bottom: 15px;
     }
+
     textarea {
       width: 100%;
-      height: 100px;
+      height: 110px;
       background: #222;
       color: white;
       border: 1px solid #333;
       border-radius: 8px;
       padding: 10px;
       resize: none;
+      font-size: 14px;
     }
+
     button {
       padding: 12px;
       margin-top: 10px;
@@ -45,30 +56,38 @@
       cursor: pointer;
       width: 100%;
     }
+
+    a {
+      text-decoration: none;
+    }
   </style>
 
   <script>
     function copyText() {
-      var copyText = document.getElementById("caption");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      alert("Caption copied! Now upload the poster and paste caption on Instagram.");
+      var text = document.getElementById("caption").value;
+      navigator.clipboard.writeText(text);
+      alert("Caption copied! Now upload poster and paste caption on Instagram.");
     }
   </script>
 
 </head>
+
 <body>
 
   <h1>Share Your Experience ❤️</h1>
+  <p>Download poster, copy caption and post now.</p>
 
   <div class="box">
+
+    <!-- Poster -->
     <img src="insta-poster.jpg" alt="Movie Poster">
 
+    <!-- Download Button -->
     <a href="insta-poster.jpg" download>
       <button>Download Poster</button>
     </a>
 
+    <!-- Caption -->
     <textarea id="caption" readonly>
 Just watched #CharithaKamakshi ❤️
 A beautiful emotional journey with heartfelt performances.
@@ -77,9 +96,16 @@ Streaming soon on ETV Win.
 
     <button onclick="copyText()">Copy Caption</button>
 
+    <!-- Instagram -->
     <a href="https://instagram.com" target="_blank">
       <button>Open Instagram</button>
     </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/?text=Just watched Charitha Kamakshi! Beautiful emotional journey. Streaming soon on ETV Win." target="_blank">
+      <button>Share on WhatsApp</button>
+    </a>
+
   </div>
 
   <br>
